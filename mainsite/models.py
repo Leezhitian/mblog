@@ -8,6 +8,8 @@ class Post(models.Model):
     body = models.TextField()
     pub_date = models.DateTimeField(default=timezone.now())
 
+#由于版本的原因，此处需要自己添加objects的属性
+    objects = models.Manager()
     class Meat:
         ordering = ('-pub_date')
 
